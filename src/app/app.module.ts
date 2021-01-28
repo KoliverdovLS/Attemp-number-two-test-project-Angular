@@ -9,6 +9,7 @@ import { ListAndBarContainerComponent } from './list-and-bar-container/list-and-
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { UsersTableComponent } from './users-table/users-table.component';
 import { ElementOfTableComponent } from './element-of-table/element-of-table.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ElementOfTableComponent } from './element-of-table/element-of-table.com
   ],
   imports: [
     BrowserModule,
-    MatIconModule
+    MatIconModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
