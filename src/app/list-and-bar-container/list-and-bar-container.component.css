@@ -1,0 +1,13 @@
+app-top-bar {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+app-users-table {
+  width: 100%;
+  height: 90%;
+}
+

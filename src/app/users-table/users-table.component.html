@@ -1,1 +1,17 @@
-<app-element-of-table></app-element-of-table>
+<table>
+  <thead>
+  <tr>
+    <th>{{textConstans.nameColumn}}</th>
+    <th>{{textConstans.userStatusColumn}}</th>
+    <th>{{textConstans.paymentStatusColumn}}</th>
+    <th class="amount-head">{{textConstans.amountColumn}}</th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  <ng-container>
+    <app-element-of-table>
+    </app-element-of-table>
+  </ng-container>
+  </tbody>
+</table>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {textConstThead} from './user-table-text-constants';
+
 
 @Component({
   selector: 'app-users-table',
@@ -6,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./users-table.component.css']
 })
 export class UsersTableComponent implements OnInit {
-
-  constructor() { }
+  textConstans = textConstThead;
+  constructor() {}
 
   ngOnInit(): void {
   }

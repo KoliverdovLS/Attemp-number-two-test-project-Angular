@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  display: block;
+  font-family: Inter, sans-serif;
+  background: #F2F0F9;
+}
+
+button {
+  cursor: pointer;
+}
+
+
+button:focus {
+  outline: none;
+}

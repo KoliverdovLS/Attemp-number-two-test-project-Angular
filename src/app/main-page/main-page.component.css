@@ -1,0 +1,15 @@
+app-list-and-bar-container {
+  display: block;
+  width: 1200px;
+  height: 700px;
+  background: white;
+  border-radius: 8px;
+}
+
+app-amount-sum {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 10%;
+}
