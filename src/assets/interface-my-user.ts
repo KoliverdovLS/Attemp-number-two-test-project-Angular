@@ -2,12 +2,12 @@ export interface MyUser {
   firstName: string;
   lastName: string;
   email: string;
-  userStatus: boolean;
+  userStatus: 'Active' | 'Inactive';
   lastLogin: string;
-  paymentStatus: string;
+  paymentStatus: 'Paid' | 'Unpaid' | 'Overdue';
   paymentPrefix: string;
   date: string;
   amount: number;
   id: number;
-  visability: boolean;
+  visibility: 'visible' | 'unvisible';
 }

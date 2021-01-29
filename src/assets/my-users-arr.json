@@ -5,105 +5,105 @@
       "firstName": "Justin",
       "lastName": " Septimus",
       "email": "example@email.com",
-      "userStatus": true,
+      "userStatus": "Active",
       "lastLogin": "Last login: 14/APR/2020",
       "paymentStatus": "Paid",
       "paymentPrefix": "Paid on ",
       "date": "15/APR/2020",
       "amount": 200,
       "id": 0,
-      "visability": true
+      "visibility": "visible"
     },
     {
       "firstName": "Anika",
       "lastName": " Madsen",
       "email": "example@email.com",
-      "userStatus": true,
+      "userStatus": "Active",
       "lastLogin": "Last login: 14/APR/2020",
       "paymentStatus": "Overdue",
       "paymentPrefix": "Dued on ",
       "date": "15/APR/2020",
       "amount": 300,
       "id": 1,
-      "visability": true
+      "visibility": "visible"
     },
     {
       "firstName": "Miracle",
       "lastName": " Vaccaro",
       "email": "example@email.com",
-      "userStatus": true,
+      "userStatus": "Active",
       "lastLogin": "Last login: 14/APR/2020",
       "paymentStatus": "Paid",
       "paymentPrefix": "Paid on ",
       "date": "15/APR/2020",
       "amount": 250,
       "id": 2,
-      "visability": true
+      "visibility": "visible"
     },
     {
       "firstName": "Mira",
       "lastName": " Herwitz",
       "email": "example@email.com",
-      "userStatus": false,
+      "userStatus": "Inactive",
       "lastLogin": "Last login: 14/APR/2020",
       "paymentStatus": "Paid",
       "paymentPrefix": "Paid on ",
       "date": "15/APR/2020",
       "amount": 200,
       "id": 3,
-      "visability": true
+      "visibility": "visible"
     },
     {
       "firstName": "Erin",
       "lastName": " Levin",
       "email": "example@email.com",
-      "userStatus": true,
+      "userStatus": "Active",
       "lastLogin": "Last login: 14/APR/2020",
       "paymentStatus": "Unpaid",
       "paymentPrefix": "Dues on ",
       "date": "15/APR/2020",
       "amount": 200,
       "id": 4,
-      "visability": true
+      "visibility": "visible"
     },
     {
       "firstName": "Jaxson",
       "lastName": " Siphron",
       "email": "example@email.com",
-      "userStatus": false,
+      "userStatus": "Inactive",
       "lastLogin": "Last login: 14/APR/2020",
       "paymentStatus": "Paid",
       "paymentPrefix": "Paid on ",
       "date": "15/APR/2020",
       "amount": 750,
       "id": 5,
-      "visability": true
+      "visibility": "visible"
     },
     {
       "firstName": "Mira",
       "lastName": " Levin",
       "email": "example@email.com",
-      "userStatus": true,
+      "userStatus": "Active",
       "lastLogin": "Last login: 14/APR/2020",
       "paymentStatus": "Unpaid",
       "paymentPrefix": "Dues on ",
       "date": "15/APR/2020",
       "amount": 200,
       "id": 6,
-      "visability": true
+      "visibility": "visible"
     },
     {
       "firstName": "Lincoln",
       "lastName": " Levin",
       "email": "example@email.com",
-      "userStatus": true,
+      "userStatus": "Active",
       "lastLogin": "Last login: 14/APR/2020",
       "paymentStatus": "Paid",
       "paymentPrefix": "Paid on ",
       "date": "15/APR/2020",
       "amount": 370,
       "id": 7,
-      "visability": true
+      "visibility": "visible"
     }
   ]
-}  
+}

@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {UsersDataService} from '../services/users-data.service';
-
+import {MyUser} from '../../assets/interface-my-user';
+import {Observable} from 'rxjs';
 @Component({
   selector: 'app-main-page',
   templateUrl: './main-page.component.html',
@@ -8,11 +9,12 @@ import {UsersDataService} from '../services/users-data.service';
   providers: [UsersDataService],
 })
 export class MainPageComponent implements OnInit {
-  users;
-  constructor(private usersDataService: UsersDataService) {}
+  usersArr: Observable<MyUser[]>;
+  constructor(private usersDataService: UsersDataService) {
+    this.usersArr = this.usersDataService.getUsers();
+  }
 
   ngOnInit(): void {
-    this.usersDataService.getUsers().subscribe(data => console.log(data));
   }
 
 }

@@ -1,21 +1,14 @@
-table {
-  width: 100%;
-  border-spacing: 0;
-}
-
 td {
   padding: 10px;
 }
 
 tr {
+  max-width: 1200px;
   border: 1px solid red;
 }
-
-tr:hover {
-  background-color: #F2F0F9;
-}
-
-thead {
+.head-list {
+  width: 100%;
+  height: 50px;
   background: #F4F2FF;
   font-family: "interFont", sans-serif;
   font-style: normal;
@@ -29,22 +22,47 @@ thead {
   color: #6E6893;
 }
 
-th {
-  height: 35px;
-  text-align: left;
-  padding: 10px;
+.row-head {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 
-p {
-  font-family: "interFont", sans-serif;
-  font-size: 12px;
-  font-weight: 500;
-  margin-top: 5px;
-  margin-bottom: 5px;
+.body-list {
+  width: 100%;
+  height: 580px;
 }
-.amount-head {
-  text-align: right;
-  margin-right: 50px;
+
+.cells {
+  height: 100%;
+  padding-left: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.cell-1 {
+  width: 25%;
+}
+.cell-2 {
+  width: 25%;
+}
+.cell-3 {
+  width: 20%;
+}
+.cell-4 {
+  width: 15%;
+  justify-content: flex-end;
+}
+.cell-5 {
+  width: 15%;
+}
+
+app-element-of-table {
+  display: block;
+  height: 12.5%;
 }
 

@@ -1,17 +1,14 @@
-<table>
-  <thead>
-  <tr>
-    <th>{{textConstans.nameColumn}}</th>
-    <th>{{textConstans.userStatusColumn}}</th>
-    <th>{{textConstans.paymentStatusColumn}}</th>
-    <th class="amount-head">{{textConstans.amountColumn}}</th>
-    <th></th>
-  </tr>
-  </thead>
-  <tbody>
-  <ng-container>
-    <app-element-of-table>
-    </app-element-of-table>
-  </ng-container>
-  </tbody>
-</table>
+<div class="head-list">
+  <div class="row-head">
+    <div class="cell-1 cells"><p>{{textConstans.nameColumn}}</p></div>
+    <div class="cell-2 cells"><p>{{textConstans.userStatusColumn}}</p></div>
+    <div class="cell-3 cells"><p>{{textConstans.paymentStatusColumn}}</p></div>
+    <div class="cell-4 cells"><p>{{textConstans.amountColumn}}</p></div>
+    <div class="cell-5 cells"></div>
+  </div>
+</div>
+<div class="body-list">
+  <app-element-of-table *ngFor="let user of usersArr" [user]="user">
+  </app-element-of-table>
+</div>
+

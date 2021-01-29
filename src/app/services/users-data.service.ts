@@ -4,17 +4,20 @@ import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
 
+interface InputData {
+  myUserArr: MyUser[];
+}
+
+
 @Injectable({
   providedIn: 'root'
 })
+
 export class UsersDataService {
 
   constructor(private http: HttpClient) { }
 
   getUsers(): Observable<MyUser[]> {
-    return this.http.get('../../assets/my-users-arr.json').pipe(map(data => {
-      /* tslint:disable-next-line */
-      return data['myUserArr'];
-    }));
+    return this.http.get<InputData>('../../assets/my-users-arr.json').pipe(map(( {myUserArr} ) => myUserArr ));
   }
 }

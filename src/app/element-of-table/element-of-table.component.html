@@ -1,1 +1,30 @@
-<p>element-of-table works!</p>
+
+  <div class="row" [class]="user.visibility">
+    <div class="cell-1 cells">
+      <p class="full-name-container">{{user.firstName + user.lastName}}</p>
+      <p class="email-container">{{user.email}}</p>
+    </div>
+    <div class="cell-2 cells">
+      <p [class]="user.userStatus + '-status'">
+        <span class="material-icons point-to-user-status">brightness_1</span>
+        {{user.userStatus}}
+      </p>
+      <p class="last-login">{{user.lastLogin}}</p>
+    </div>
+    <div class="cell-3 cells">
+      <p [class]="user.paymentStatus + '-status'">
+        <span class="material-icons point-to-user-status">brightness_1</span>
+        {{user.paymentStatus}}
+      </p>
+      <p class="date-paid">{{user.paymentPrefix + user.date}}</p>
+    </div>
+    <div class="cell-4 cells">
+      <p class="amount-count">{{textConstants.currencyIcon + user.amount}}</p>
+      <p class="amount-text-currency">{{textConstants.currencyText}}</p>
+    </div>
+    <div class="cell-5 cells">
+      <p class="view-more-text">{{textConstants.viewMore}}</p>
+      <span class="material-icons view-more-btn">more_vert</span>
+    </div>
+  </div>
+
