@@ -1,7 +1,10 @@
-<app-amount-sum [usersArr]="usersArrData | filterByText: filterVal"></app-amount-sum>
-<app-list-and-bar-container [usersArr]="usersArr | async"
-                            (outputUsersData)="takeUsersData($event)"
-                            (outputFilterVal)="takeFilterVal($event)">
-</app-list-and-bar-container>
+<div class="main-page-container">
+  <app-amount-sum [usersArr]="usersArrData | filterByText: filterVal"></app-amount-sum>
+  <app-list-and-bar-container [usersArr]="usersArr | async"
+                              (outputUsersData)="takeUsersData($event)"
+                              (outputFilterVal)="takeFilterVal($event)">
+  </app-list-and-bar-container>
+
+</div>
 
 

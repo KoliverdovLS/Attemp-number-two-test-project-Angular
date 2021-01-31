@@ -19,6 +19,7 @@ export class ViewMorePopupComponent implements OnInit {
 
   hidePopup(): void {
     this.outputVisibilityPopup.emit(false);
+    this.unvisionPopupDeleteUser = true;
   }
 
   openDeletePopup(): void {

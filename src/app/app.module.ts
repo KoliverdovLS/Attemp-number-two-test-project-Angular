@@ -14,6 +14,13 @@ import {FormsModule} from '@angular/forms';
 import { FilterByTextPipe } from './filter-by-text.pipe';
 import { GetSumAmountByUsersArrPipe } from './get-sum-amount-by-users-arr.pipe';
 import { ViewMorePopupComponent } from './element-of-table/view-more-popup/view-more-popup.component';
+import {RouterModule, Routes} from '@angular/router';
+import { AddUserPageComponent } from './add-user-page/add-user-page.component';
+
+const appRoutes: Routes = [
+  {path: '', component: MainPageComponent},
+  {path: 'add-user', component: AddUserPageComponent}
+];
 
 @NgModule({
   declarations: [
@@ -27,12 +34,15 @@ import { ViewMorePopupComponent } from './element-of-table/view-more-popup/view-
     FilterByTextPipe,
     GetSumAmountByUsersArrPipe,
     ViewMorePopupComponent,
+    AddUserPageComponent,
   ],
   imports: [
+    RouterModule,
     BrowserModule,
     MatIconModule,
     HttpClientModule,
     FormsModule,
+    RouterModule.forRoot(appRoutes),
   ],
   providers: [],
   bootstrap: [AppComponent]
