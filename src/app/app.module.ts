@@ -10,6 +10,9 @@ import { TopBarComponent } from './top-bar/top-bar.component';
 import { UsersTableComponent } from './users-table/users-table.component';
 import { ElementOfTableComponent } from './element-of-table/element-of-table.component';
 import {HttpClientModule} from '@angular/common/http';
+import {FormsModule} from '@angular/forms';
+import { FilterByTextPipe } from './filter-by-text.pipe';
+import { GetSumAmountByUsersArrPipe } from './get-sum-amount-by-users-arr.pipe';
 
 @NgModule({
   declarations: [
@@ -20,11 +23,14 @@ import {HttpClientModule} from '@angular/common/http';
     TopBarComponent,
     UsersTableComponent,
     ElementOfTableComponent,
+    FilterByTextPipe,
+    GetSumAmountByUsersArrPipe,
   ],
   imports: [
     BrowserModule,
     MatIconModule,
     HttpClientModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

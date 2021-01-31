@@ -1,2 +1,2 @@
-<app-top-bar></app-top-bar>
-<app-users-table [usersArr]="usersArr"></app-users-table>
+<app-top-bar (filterValChanged)="setFilterVal($event)"></app-top-bar>
+<app-users-table [usersArr]="usersArr | filterByText: filterVal"></app-users-table>
