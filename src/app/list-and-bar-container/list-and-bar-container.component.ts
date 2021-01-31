@@ -1,4 +1,11 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  Input,
+  OnInit,
+  Output,
+
+} from '@angular/core';
 import {MyUser} from '../../assets/interface-my-user';
 
 @Component({
@@ -8,8 +15,8 @@ import {MyUser} from '../../assets/interface-my-user';
 })
 export class ListAndBarContainerComponent implements OnInit {
   @Input() usersArr: MyUser[];
-  @Output() outputUsersData = new EventEmitter<any>();
-  @Output() outputFilterVal = new EventEmitter<any>();
+  @Output() outputUsersData = new EventEmitter<MyUser[]>();
+  @Output() outputFilterVal = new EventEmitter<string>();
   filterVal = '';
   constructor() { }
   setFilterVal(filterVal: string): void {
@@ -22,7 +29,14 @@ export class ListAndBarContainerComponent implements OnInit {
   sendFilterVal(): void {
     this.outputFilterVal.emit(this.filterVal);
   }
-  ngOnInit(): void {
-    setTimeout(() => this.sendUsersData(), 0);
+
+  deleteUser(id: number): void {
+    this.usersArr = this.usersArr.filter((user) => user.id !== id);
+    this.outputUsersData.emit(this.usersArr);
   }
+  ngOnInit(): void {
+    setTimeout(() => this.sendUsersData(), 20);
+  }
+
+
 }

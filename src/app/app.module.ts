@@ -13,6 +13,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import { FilterByTextPipe } from './filter-by-text.pipe';
 import { GetSumAmountByUsersArrPipe } from './get-sum-amount-by-users-arr.pipe';
+import { ViewMorePopupComponent } from './element-of-table/view-more-popup/view-more-popup.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { GetSumAmountByUsersArrPipe } from './get-sum-amount-by-users-arr.pipe';
     ElementOfTableComponent,
     FilterByTextPipe,
     GetSumAmountByUsersArrPipe,
+    ViewMorePopupComponent,
   ],
   imports: [
     BrowserModule,

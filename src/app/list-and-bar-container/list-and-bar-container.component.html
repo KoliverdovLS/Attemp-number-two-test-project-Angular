@@ -1,2 +1,2 @@
 <app-top-bar (filterValChanged)="setFilterVal($event)"></app-top-bar>
-<app-users-table [usersArr]="usersArr | filterByText: filterVal"></app-users-table>
+<app-users-table [usersArr]="usersArr | filterByText: filterVal" (outputUserDelete)="deleteUser($event)"></app-users-table>

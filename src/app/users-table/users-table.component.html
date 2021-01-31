@@ -8,7 +8,7 @@
   </div>
 </div>
 <div class="body-list">
-  <app-element-of-table *ngFor="let user of usersArr" [user]="user">
+  <app-element-of-table *ngFor="let user of usersArr" [user]="user" (outputIdUsersToDelete)="deleteUser($event)">
   </app-element-of-table>
 </div>
 

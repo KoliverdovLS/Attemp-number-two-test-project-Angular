@@ -23,8 +23,15 @@
       <p class="amount-text-currency">{{textConstants.currencyText}}</p>
     </div>
     <div class="cell-5 cells">
-      <p class="view-more-text">{{textConstants.viewMore}}</p>
-      <span class="material-icons view-more-btn">more_vert</span>
+      <ng-container *ngIf="!visionPopupViewMore">
+        <p class="view-more-text">{{textConstants.viewMore}}</p>
+        <span class="material-icons view-more-btn" (click)="openViewMorePopup()">more_vert</span>
+      </ng-container>
+      <app-view-more-popup [class.unvisible]="!visionPopupViewMore"
+                           (outputVisibilityPopup)="closePopup($event)"
+                           (userToDelete)="sendIdUserToDelete($event)"
+                           [user]="user">
+      </app-view-more-popup>
     </div>
   </div>
 
