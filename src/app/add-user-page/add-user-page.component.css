@@ -94,3 +94,27 @@ button:hover {
   box-shadow: 0 0 3px #6D5BD0;
 }
 
+select {
+  font-family: Roboto, sans-serif;
+  font-size: 18px;
+  height: 40px;
+  width: 450px;
+  padding:0 10px;
+
+  outline: none;
+  background: #F4F2FF;
+
+  border: 1px solid #6D5BD0;
+  box-shadow: 0 0 3px #6D5BD0;
+  box-sizing: border-box;
+  border-radius: 6px;
+
+  caret-color: #6D5BD0;
+  color: rgba(0,0,0,0.8);
+}
+
+option {
+}
+
+
+

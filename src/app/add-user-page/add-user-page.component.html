@@ -2,14 +2,26 @@
   <div class="title-container">
     <h3>Create user</h3>
   </div>
-  <input>
-  <input type="email">
-  <input>
-  <input>
-  <input>
-  <input>
+  <input type="text" name="name" placeholder="Name">
+  <input type="email" name="email" placeholder="Email">
+  <input type="text" name="address" placeholder="Address">
+  <select id="status-list">
+    <option class="option-status" value="Active">Active</option>
+    <option value="Inactive">Inactive</option>
+    <option value="Wait">Wait</option>
+  </select>
+  <!--
+  <input type="text" name="status" list="liststatus">
+  <datalist id="liststatus">
+    <option value="Active"></option>
+    <option value="Inactive"></option>
+    <option value="Wait"></option>
+  </datalist>
+  -->
+  <input type="text" name="amount" placeholder="Amount: $">
+  <input type="text" name="personal-info" placeholder="Personal info">
   <div class="btn-save-container">
-    <button routerLink="">exit</button>
+    <button routerLink=""><span class="material-icons">exit_to_app</span>exit</button>
     <button><span class="material-icons">save</span>Save</button>
   </div>
 </div>
