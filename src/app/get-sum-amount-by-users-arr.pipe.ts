@@ -6,12 +6,8 @@ import {MyUser} from '../assets/interface-my-user';
 })
 export class GetSumAmountByUsersArrPipe implements PipeTransform {
 
-  transform(value: MyUser[] = []): number {
-    let sum = 0;
-    value.forEach(el => {
-      sum += el.amount;
-    });
-    return sum;
+  transform(usersArr: MyUser[] = []): number {
+    return usersArr.reduce((acc, {amount}) => acc + amount, 0);
   }
 
 }
