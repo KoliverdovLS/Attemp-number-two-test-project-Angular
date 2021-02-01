@@ -18,6 +18,7 @@ import {RouterModule, Routes} from '@angular/router';
 import { AddUserPageComponent } from './add-user-page/add-user-page.component';
 import { EditUserPageComponent } from './edit-user-page/edit-user-page.component';
 import { ViewUserPageComponent } from './view-user-page/view-user-page.component';
+import { DeleteUserPopupComponent } from './list-and-bar-container/delete-user-popup/delete-user-popup.component';
 
 const appRoutes: Routes = [
   {path: '', component: MainPageComponent},
@@ -41,6 +42,7 @@ const appRoutes: Routes = [
     AddUserPageComponent,
     EditUserPageComponent,
     ViewUserPageComponent,
+    DeleteUserPopupComponent,
   ],
   imports: [
     RouterModule,

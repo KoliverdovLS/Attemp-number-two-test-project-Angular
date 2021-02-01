@@ -1,0 +1,71 @@
+.popup-delete-container {
+  position: absolute;
+  top: 480px;
+  right: calc(50% - 140px/2);
+  width: 280px;
+  height: 120px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  background: #FFFFFF;
+  box-shadow: 0 24px 38px rgba(0, 0, 0, 0.14), 0 9px 46px rgba(0, 0, 0, 0.12), 0 11px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.delete-text-container {
+  width: 80%;
+  height: 60%;
+
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.btn-yes-no-container {
+  width: 80%;
+  height: 20%;
+  margin-bottom: 5px;
+
+  display: flex;
+  justify-content: flex-end;
+}
+
+button {
+  width: 50px;
+  height: 20px;
+  margin-right: 20px;
+
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  /* or 114% */
+
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+
+  background-color: white;
+  border: none;
+  border-radius: 6px;
+}
+
+button:hover {
+  background: #F4F2FF;
+}
+
+.btn-yes {
+  color: #D30000;
+}
+
+.btn-no {
+  color: #985EFF;
+}

@@ -1,2 +1,3 @@
 <app-top-bar (filterValChanged)="setFilterVal($event)"></app-top-bar>
-<app-users-table [usersArr]="usersArr | filterByText: filterVal" (outputUserDelete)="deleteUser($event)"></app-users-table>
+<app-users-table [usersArr]="usersArr | filterByText: filterVal" (outputUserDelete)="openDeleteUserPopup($event)"></app-users-table>
+<app-delete-user-popup *ngIf="visibilityDeletePopup" (closeDeletePopup)="closeDeleteUserPopup()" (deleteUserEvent)="deleteUser()"></app-delete-user-popup>

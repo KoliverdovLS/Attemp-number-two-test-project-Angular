@@ -17,7 +17,9 @@ export class ListAndBarContainerComponent implements OnInit {
   @Input() usersArr: MyUser[];
   @Output() outputUsersData = new EventEmitter<MyUser[]>();
   @Output() outputFilterVal = new EventEmitter<string>();
+  visibilityDeletePopup = false;
   filterVal = '';
+  idToDelete: number;
   constructor() { }
   setFilterVal(filterVal: string): void {
     this.filterVal = filterVal;
@@ -30,8 +32,17 @@ export class ListAndBarContainerComponent implements OnInit {
     this.outputFilterVal.emit(this.filterVal);
   }
 
-  deleteUser(id: number): void {
-    this.usersArr = this.usersArr.filter((user) => user.id !== id);
+  openDeleteUserPopup(id: number): void {
+    this.idToDelete = id;
+    this.visibilityDeletePopup = true;
+  }
+
+  closeDeleteUserPopup(): void {
+    this.visibilityDeletePopup = false;
+  }
+
+  deleteUser(): void {
+    this.usersArr = this.usersArr.filter((user) => user.id !== this.idToDelete);
     this.outputUsersData.emit(this.usersArr);
   }
   ngOnInit(): void {

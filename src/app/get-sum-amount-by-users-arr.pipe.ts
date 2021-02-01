@@ -9,5 +9,4 @@ export class GetSumAmountByUsersArrPipe implements PipeTransform {
   transform(usersArr: MyUser[] = []): number {
     return usersArr.reduce((acc, {amount}) => acc + amount, 0);
   }
-
 }

@@ -10,8 +10,7 @@ export class ViewMorePopupComponent implements OnInit {
   @Input() user: MyUser;
   @Input() visionPopupViewMore: boolean;
   @Output() outputVisibilityPopup = new EventEmitter<boolean>();
-  @Output() userToDelete = new EventEmitter<MyUser>();
-  unvisionPopupDeleteUser = true;
+  @Output() userToDelete = new EventEmitter<number>();
   constructor() { }
 
   ngOnInit(): void {
@@ -19,18 +18,10 @@ export class ViewMorePopupComponent implements OnInit {
 
   hidePopup(): void {
     this.outputVisibilityPopup.emit(false);
-    this.unvisionPopupDeleteUser = true;
   }
 
-  openDeletePopup(): void {
-    this.unvisionPopupDeleteUser = false;
-  }
-  closeDeletePopup(): void {
-    this.unvisionPopupDeleteUser = true;
-  }
-
-  sendUsedToDelete(user: MyUser): void {
-    this.userToDelete.emit(user);
+  sendUsedToDelete(userId: number): void {
+    this.userToDelete.emit(userId);
   }
 
 }

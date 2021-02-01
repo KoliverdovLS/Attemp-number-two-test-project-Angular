@@ -17,8 +17,8 @@ export class ElementOfTableComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  sendIdUserToDelete(event: MyUser): void {
-    this.outputIdUsersToDelete.emit(event.id);
+  sendIdUserToDelete(event: number): void {
+    this.outputIdUsersToDelete.emit(event);
   }
 
   openViewMorePopup(): void {
