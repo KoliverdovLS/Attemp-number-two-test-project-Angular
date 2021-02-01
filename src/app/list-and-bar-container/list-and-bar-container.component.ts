@@ -7,11 +7,13 @@ import {
 
 } from '@angular/core';
 import {MyUser} from '../../assets/interface-my-user';
+import {UsersDataService} from '../services/users-data.service';
 
 @Component({
   selector: 'app-list-and-bar-container',
   templateUrl: './list-and-bar-container.component.html',
   styleUrls: ['./list-and-bar-container.component.css'],
+  providers: [UsersDataService],
 })
 export class ListAndBarContainerComponent implements OnInit {
   @Input() usersArr: MyUser[];
@@ -20,7 +22,7 @@ export class ListAndBarContainerComponent implements OnInit {
   visibilityDeletePopup = false;
   filterVal = '';
   idToDelete: number;
-  constructor() { }
+  constructor(private usersDataService: UsersDataService) { }
   setFilterVal(filterVal: string): void {
     this.filterVal = filterVal;
     this.sendFilterVal();
@@ -44,6 +46,7 @@ export class ListAndBarContainerComponent implements OnInit {
   deleteUser(): void {
     this.usersArr = this.usersArr.filter((user) => user.id !== this.idToDelete);
     this.outputUsersData.emit(this.usersArr);
+    this.usersDataService.deleteUser(this.idToDelete);
   }
   ngOnInit(): void {
     setTimeout(() => this.sendUsersData(), 20);
