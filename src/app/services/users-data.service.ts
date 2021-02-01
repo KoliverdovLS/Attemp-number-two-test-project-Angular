@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {MyUser} from '../../assets/interface-my-user';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
-import {map} from 'rxjs/operators';
+import {map, tap} from 'rxjs/operators';
 
 interface InputData {
   myUserArr: MyUser[];
@@ -30,12 +30,20 @@ export class UsersDataService {
 
   deleteUser(id: number): void {
     if (cache) {
-      cache = cache
-        .pipe(
-          map((users) => {
-            return  users.filter((user) => user.id !== id);
-          })
-        );
+      cache = cache.pipe(
+          map((users) => users.filter((user) => user.id !== id)
+        ));
     }
+  }
+
+  addUser(user: MyUser): Observable<MyUser[]> {
+    if (cache) {
+      cache = cache.pipe(
+        tap((users) => {
+          users.push(user);
+        })
+      );
+    }
+    return cache;
   }
 }
