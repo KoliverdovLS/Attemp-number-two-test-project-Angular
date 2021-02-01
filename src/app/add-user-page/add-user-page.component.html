@@ -2,26 +2,25 @@
   <div class="title-container">
     <h3>Create user</h3>
   </div>
-  <input type="text" name="name" placeholder="Name">
-  <input type="email" name="email" placeholder="Email">
-  <input type="text" name="address" placeholder="Address">
-  <select id="status-list">
-    <option class="option-status" value="Active">Active</option>
+  <input type="text" name="name" placeholder="Name" [(ngModel)]="fullName">
+  <input type="email" name="email" placeholder="Email" [(ngModel)]="email">
+  <select id="status-list" [(ngModel)]="userStatus">
+    <option class="select-title" disabled selected>User status:</option>
+    <option value="Active">Active</option>
     <option value="Inactive">Inactive</option>
-    <option value="Wait">Wait</option>
   </select>
-  <!--
-  <input type="text" name="status" list="liststatus">
-  <datalist id="liststatus">
-    <option value="Active"></option>
-    <option value="Inactive"></option>
-    <option value="Wait"></option>
-  </datalist>
-  -->
-  <input type="text" name="amount" placeholder="Amount: $">
-  <input type="text" name="personal-info" placeholder="Personal info">
+  <input type="date" id="date-login" name="date-last-login" [(ngModel)]="dateLastActive">
+  <select id="paid-status" [(ngModel)]="paidStatus">
+    <option class="select-title" disabled selected>Paid status:</option>
+    <option value="Paid">Paid</option>
+    <option value="Unpaid">Unpaid</option>
+    <option value="Overdue">Overdue</option>
+  </select>
+  <input type="date" id="date-paid" name="date-paid" [(ngModel)]="datePaid">
+  <input class="amount" type="text" name="amount" placeholder="Amount: $" [(ngModel)]="amount">
+  <input class="personal-info" type="text" name="personal-info" placeholder="Personal info" [(ngModel)]="personalInfo">
   <div class="btn-save-container">
     <button routerLink=""><span class="material-icons">exit_to_app</span>exit</button>
-    <button><span class="material-icons">save</span>Save</button>
+    <button (click)="addUser()"><span class="material-icons">save</span>Save</button>
   </div>
 </div>

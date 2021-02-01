@@ -9,5 +9,6 @@ export interface MyUser {
   date: string;
   amount: number;
   id: number;
-  visibility: 'visible' | 'unvisible';
+  visibility?: 'visible' | 'unvisible';
+  personalInfo?: string;
 }
