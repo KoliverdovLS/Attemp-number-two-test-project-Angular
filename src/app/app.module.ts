@@ -16,10 +16,14 @@ import { GetSumAmountByUsersArrPipe } from './get-sum-amount-by-users-arr.pipe';
 import { ViewMorePopupComponent } from './element-of-table/view-more-popup/view-more-popup.component';
 import {RouterModule, Routes} from '@angular/router';
 import { AddUserPageComponent } from './add-user-page/add-user-page.component';
+import { EditUserPageComponent } from './edit-user-page/edit-user-page.component';
+import { ViewUserPageComponent } from './view-user-page/view-user-page.component';
 
 const appRoutes: Routes = [
   {path: '', component: MainPageComponent},
-  {path: 'add-user', component: AddUserPageComponent}
+  {path: 'add-user', component: AddUserPageComponent},
+  {path: 'view-user/:id', component: ViewUserPageComponent},
+  {path: 'edit-user/:id', component: EditUserPageComponent},
 ];
 
 @NgModule({
@@ -35,6 +39,8 @@ const appRoutes: Routes = [
     GetSumAmountByUsersArrPipe,
     ViewMorePopupComponent,
     AddUserPageComponent,
+    EditUserPageComponent,
+    ViewUserPageComponent,
   ],
   imports: [
     RouterModule,

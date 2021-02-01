@@ -12,7 +12,7 @@
   <div class="close-btn">
     <span class="material-icons close-icon" (click)="hidePopup()">close</span>
   </div>
-  <div class="element-popup-container"><p>Edit</p></div>
-  <div class="element-popup-container"><p>View Profile</p></div>
+  <div class="element-popup-container" [routerLink]="['edit-user',user.id]"><p>Edit</p></div>
+  <div class="element-popup-container" [routerLink]="['view-user',user.id]"><p>View Profile</p></div>
   <div class="element-popup-container" (click)="openDeletePopup()"><p class="delete-btn">Delete</p></div>
 </div>
