@@ -38,7 +38,7 @@ export class AddUserPageComponent {
     }
     return {
       first: fullName.slice(0, indexSpace),
-      last: fullName.slice(indexSpace + 1),
+      last: ' ' + fullName.slice(indexSpace + 1),
     };
   }
 
@@ -51,7 +51,7 @@ export class AddUserPageComponent {
       userStatus: this.userStatus,
       lastLogin: 'Last login:' + this.dateLastActive,
       paymentStatus: this.paidStatus,
-      paymentPrefix: this.paidStatus + 'on',
+      paymentPrefix: this.paidStatus + ' on ',
       date: this.datePaid,
       amount: Number(this.amount),
       id: 20,

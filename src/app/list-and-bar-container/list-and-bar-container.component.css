@@ -12,3 +12,12 @@ app-users-table {
   height: 90%;
 }
 
+.list-and-bar-component {
+  display: block;
+  width: 1200px;
+  height: 700px;
+  background: white;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+

@@ -2,7 +2,6 @@ import {
   Component,
   EventEmitter,
   Input,
-  OnInit,
   Output,
 
 } from '@angular/core';
@@ -15,7 +14,7 @@ import {UsersDataService} from '../services/users-data.service';
   styleUrls: ['./list-and-bar-container.component.css'],
   providers: [UsersDataService],
 })
-export class ListAndBarContainerComponent implements OnInit {
+export class ListAndBarContainerComponent {
   @Input() usersArr: MyUser[];
   @Output() outputUsersData = new EventEmitter<MyUser[]>();
   @Output() outputFilterVal = new EventEmitter<string>();
@@ -25,13 +24,6 @@ export class ListAndBarContainerComponent implements OnInit {
   constructor(private usersDataService: UsersDataService) { }
   setFilterVal(filterVal: string): void {
     this.filterVal = filterVal;
-    this.sendFilterVal();
-  }
-  sendUsersData(): void {
-    this.outputUsersData.emit(this.usersArr);
-  }
-  sendFilterVal(): void {
-    this.outputFilterVal.emit(this.filterVal);
   }
 
   openDeleteUserPopup(id: number): void {
@@ -47,9 +39,6 @@ export class ListAndBarContainerComponent implements OnInit {
     this.usersArr = this.usersArr.filter((user) => user.id !== this.idToDelete);
     this.outputUsersData.emit(this.usersArr);
     this.usersDataService.deleteUser(this.idToDelete);
-  }
-  ngOnInit(): void {
-    setTimeout(() => this.sendUsersData(), 20);
   }
 
 

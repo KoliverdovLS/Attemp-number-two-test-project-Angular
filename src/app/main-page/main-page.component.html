@@ -1,5 +1,4 @@
 <div class="main-page-container">
-  <app-amount-sum [usersArr]="usersArrData | filterByText: filterVal"></app-amount-sum>
   <app-list-and-bar-container [usersArr]="usersArr | async"
                               (outputUsersData)="takeUsersData($event)"
                               (outputFilterVal)="takeFilterVal($event)">
