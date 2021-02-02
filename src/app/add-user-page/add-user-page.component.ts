@@ -1,10 +1,16 @@
 import { Component } from '@angular/core';
 import {MyUser} from '../../assets/interface-my-user';
 import {UsersDataService} from '../services/users-data.service';
+import {ActivatedRoute} from '@angular/router';
+import {Subscription} from 'rxjs';
 
 interface Name {
   first: string;
   last: string;
+}
+
+interface LastId {
+  lastId: number;
 }
 
 
@@ -15,6 +21,8 @@ interface Name {
   providers: [UsersDataService],
 })
 export class AddUserPageComponent {
+  lastId: number;
+
   user: MyUser;
   test: string;
   fullName: string;
@@ -26,7 +34,13 @@ export class AddUserPageComponent {
   amount: string;
   personalInfo: string;
 
-  constructor(private usersDataService: UsersDataService) { }
+  private querySubscription: Subscription;
+
+  constructor(private usersDataService: UsersDataService, private route: ActivatedRoute) {
+    this.querySubscription = route.queryParams.subscribe((queryParam: LastId) => {
+      this.lastId = queryParam.lastId;
+    });
+  }
 
   getFirsAndLastName(fullName: string): Name {
     const indexSpace: number = fullName.indexOf(' ');
@@ -54,7 +68,7 @@ export class AddUserPageComponent {
       paymentPrefix: this.paidStatus + ' on ',
       date: this.datePaid,
       amount: Number(this.amount),
-      id: 20,
+      id: this.lastId + 1,
       personalInfo: this.personalInfo,
     };
     this.usersDataService.addUser(user);

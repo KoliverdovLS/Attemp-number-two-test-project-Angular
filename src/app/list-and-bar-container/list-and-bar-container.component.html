@@ -1,6 +1,6 @@
 <app-amount-sum [usersArr]="usersArr | filterByText: filterVal"></app-amount-sum>
 <div class="list-and-bar-component">
-  <app-top-bar (filterValChanged)="setFilterVal($event)"></app-top-bar>
+  <app-top-bar (filterValChanged)="setFilterVal($event)" [usersArr]="usersArr"></app-top-bar>
   <app-users-table [usersArr]="usersArr | filterByText: filterVal" (outputUserDelete)="openDeleteUserPopup($event)"></app-users-table>
   <app-delete-user-popup *ngIf="visibilityDeletePopup" (closeDeletePopup)="closeDeleteUserPopup()" (deleteUserEvent)="deleteUser()"></app-delete-user-popup>
 </div>
