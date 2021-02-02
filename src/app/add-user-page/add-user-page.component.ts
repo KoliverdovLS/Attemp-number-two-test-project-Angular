@@ -63,7 +63,7 @@ export class AddUserPageComponent {
       lastName: name.last,
       email: this.email,
       userStatus: this.userStatus,
-      lastLogin: 'Last login:' + this.dateLastActive,
+      lastLogin: 'Last login: ' + this.dateLastActive,
       paymentStatus: this.paidStatus,
       paymentPrefix: this.paidStatus + ' on ',
       date: this.datePaid,
