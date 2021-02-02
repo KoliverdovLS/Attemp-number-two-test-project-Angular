@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {UsersDataService} from '../services/users-data.service';
 import {MyUser} from '../../assets/interface-my-user';
 import {Observable} from 'rxjs';
@@ -8,7 +8,7 @@ import {Observable} from 'rxjs';
   styleUrls: ['./main-page.component.css'],
   providers: [UsersDataService],
 })
-export class MainPageComponent implements OnInit {
+export class MainPageComponent {
   usersArr: Observable<MyUser[]>;
   usersArrData: MyUser[];
   filterVal: string;
@@ -21,8 +21,5 @@ export class MainPageComponent implements OnInit {
 
   takeFilterVal(filterVal: string): void {
     this.filterVal = filterVal;
-  }
-
-  ngOnInit(): void {
   }
 }

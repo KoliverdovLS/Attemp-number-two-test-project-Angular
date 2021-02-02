@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 
 @Component({
@@ -6,13 +6,9 @@ import {ActivatedRoute} from '@angular/router';
   templateUrl: './view-user-page.component.html',
   styleUrls: ['./view-user-page.component.css']
 })
-export class ViewUserPageComponent implements OnInit {
+export class ViewUserPageComponent {
   id: number;
   constructor(private activateRoute: ActivatedRoute) {
     this.id = activateRoute.snapshot.params.id;
   }
-
-  ngOnInit(): void {
-  }
-
 }

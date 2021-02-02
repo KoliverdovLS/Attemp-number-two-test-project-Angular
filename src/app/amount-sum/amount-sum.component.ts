@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {MyUser} from '../../assets/interface-my-user';
 
 @Component({
@@ -7,11 +7,7 @@ import {MyUser} from '../../assets/interface-my-user';
   styleUrls: ['./amount-sum.component.css']
 })
 
-export class AmountSumComponent implements OnInit {
+export class AmountSumComponent {
   @Input() usersArr: MyUser[];
   constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }
