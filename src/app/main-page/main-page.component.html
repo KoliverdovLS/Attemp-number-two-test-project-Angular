@@ -1,7 +1,5 @@
 <div class="main-page-container">
-  <app-list-and-bar-container [usersArr]="usersArr | async"
-                              (outputUsersData)="takeUsersData($event)"
-                              (outputFilterVal)="takeFilterVal($event)">
+  <app-list-and-bar-container [usersArr]="usersArr | async">
   </app-list-and-bar-container>
 
 </div>

@@ -15,11 +15,4 @@ export class MainPageComponent {
   constructor(private usersDataService: UsersDataService) {
     this.usersArr = this.usersDataService.getUsers();
   }
-  takeUsersData(usersData: MyUser[]): void {
-    this.usersArrData = usersData;
-  }
-
-  takeFilterVal(filterVal: string): void {
-    this.filterVal = filterVal;
-  }
 }
